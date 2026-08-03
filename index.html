@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ngombo Mibaraka Michael</title>
+
+    <!-- Frameworks & Polices -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personnalisé -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <nav class="navbar">
+        <div class="logo">
+            UTC <span class="logo-sub">Génie Logiciel</span>
+        </div>
+
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
 
-        <div class="logo">
-            UTC <span class="logo-sub">Génie Logiciel</span>
-        </div>
-
         <ul class="nav-links" id="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#competences">Compétences</a></li>
             <li><a href="#contact" class="btn-contact-nav">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- SECTION HERO -->
     <header id="accueil" class="hero">
         <div class="hero-container">
             <div class="hero-photo-container">
@@ -39,9 +46,8 @@
             <div class="hero-text">
                 <span class="greeting">Bonjour, je suis</span>
                 <h1>Ngombo Mibaraka <span class="highlight">Michael</span></h1>
-                <p>Étudiant en Génie Logiciel & Informatique à l'Université Technologique du Congo (UTC)</p>
-                <p>Co-fondateur Hub Tech DRC</p>
-                <p>Membre Passionnated Web Club</p>
+                <p class="role-title">Étudiant en Génie Logiciel & Informatique à l'Université Technologique du Congo (UTC)</p>
+                <p class="sub-info"><i class="fas fa-rocket text-primary"></i> Co-fondateur Hub Tech DRC | Membre Passionnated Web Club</p>
 
                 <div class="hero-btns">
                     <a href="#projets" class="btn-primary">Découvrir mes projets</a>
@@ -51,204 +57,192 @@
         </div>
     </header>
 
-        <!-- Main ou cors des informations personnelle -->
     <main>
-        <!-- PROJETS -->
+        <!-- SECTION PROJETS -->
         <section id="projets" class="section">
-            <h2 class="section-title">Mes Réalisations et Activités</h2>
+            <h2 class="section-title">Mes Réalisations</h2>
 
             <div class="projects-grid">
-
                 <div class="project-card">
-                    <h3>Système de Recensement</h3>
-                    <p>Plateforme intelligente pour la gestion des ménages à Uvira.</p>
-                    <span class="tag">python</span>
-                    <span class="tag">CustomtKinter</span>
-                    <span class="tag">Kivy</span>
-                    <span class="tag">Data</span>
+                    <div class="card-content">
+                        <h3>Système de Recensement</h3>
+                        <p>Plateforme intelligente pour la gestion des ménages à Uvira.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CustomTkinter</span>
+                            <span class="tag">Kivy</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
+                        <a href="projet-recensement.html" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Portfolio Personnel</h3>
-                    <p>Site moderne responsive pour présenter mes compétences.</p>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                     <span class="tag">JS</span>
+                    <div class="card-content">
+                        <h3>Portfolio Personnel</h3>
+                        <p>Site web moderne, réactif et dynamique pour présenter mon profil.</p>
+                        <div class="tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="btn-link-more">Projet en cours</a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>3e CBCA MULONGWE</h3>
-                    <p>Site de l'eglise 3e Communaute Baptiste au Centre de l'Afrique paroisse MULONGWE l'un des paroisses du poste Uvira.</p>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JS</span>
+                    <div class="card-content">
+                        <h3>3e CBCA MULONGWE</h3>
+                        <p>Site de l'église 3e Communauté Baptiste au Centre de l'Afrique paroisse MULONGWE.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://ngombomibaraka-eng.github.io/cbca_mulongwe/" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Hub Tech DRC - Innovation et Technologie</h3>
-                    <p>Site officiel du club Hub Tech DRC - Groupe d'étudiants passionnés par la transformation numérique et l'innovation à l'Université Technologique du Congo (UTC-Uvira)</p>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JS</span>
-                    <span class="tag">Data</span>
+                    <div class="card-content">
+                        <h3>Hub Tech DRC</h3>
+                        <p>Plateforme officielle du club d'innovation et de transformation numérique à l'UTC-Uvira.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://youtube.com/@hubtechdrc?si=TBOERxqZ5r6x81qi" target="_blank" class="btn-icon"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Createur chansons personnalisé</h3>
-                    <p>Rendons vos évenements inoubliable en personnalisant vos chansons pour anniversaire, Defense, Mariage, Naissance, Deuil, etc.</p>
-                    <span class="tag">100% personnalisé</span>
-                    <span class="tag">IA Générative</span>
+                    <div class="card-content">
+                        <h3>Créateur de Chansons Personnalisées</h3>
+                        <p>Service de personnalisation de musiques pour événements (Anniversaires, Réceptions, etc.).</p>
+                        <div class="tags">
+                            <span class="tag">IA Générative</span>
+                            <span class="tag">Audio</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- PARCOURS -->
+        <!-- SECTION PARCOURS -->
         <section id="parcours" class="section">
             <h2 class="section-title">Mon Parcours</h2>
 
             <div class="timeline">
-
                 <div class="timeline-item">
+                    <span class="timeline-date">2024 - Présent</span>
                     <h3>Université Technologique du Congo</h3>
-                    <p>Génie Logiciel & Informatique</p>
-                    <span>2024 - Aujourd’hui</span>
+                    <p>Études en Génie Logiciel & Informatique</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h3>Passionnated Web Club - Uvira</h3>
-                    <p>Formation à la programmation Web - Front End. </p>
-                    <span>Novembre 2025</span>
+                    <span class="timeline-date">Juillet 2026</span>
+                    <h3>Habari RDC x La Benevolencija</h3>
+                    <p>Certificat : Prévention des discours de haine et consolidation de la paix</p>
                 </div>
 
                 <div class="timeline-item">
+                    <span class="timeline-date">Mars 2026</span>
                     <h3>Université Technologique du Congo</h3>
-                    <p>Brevet de formation python.</p>
-                     <span>Mars 2026</span>
+                    <p>Brevet de formation Python</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h3>Université Technologique du Congo</h3>
-                    <p>Brevet de formation IA GENERATIVE. </p>
-                    <span>Novembre 2025</span>
+                    <span class="timeline-date">Novembre 2025</span>
+                    <h3>Passionnated Web Club & UTC</h3>
+                    <p>Formations Web Front-End & IA Générative</p>
                 </div>
+            </div>
 
-                <div class="timeline-item">
-                    <h3>Habari RDC en partenariat avec la Benevolencija</h3>
-                    <p> Certificat obtenu pour la prevention des discours de haine, a la promotion de la cohesion sociale, a l'education aux medias et a l'information ainsi qu'a la consolidation de la paix en RDC.</p>
-                    <span>Juillet 2026</span>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Conduite AUTO-MOBILE</h3>
-                    <p>Brevet de formation en conduite AUTO-MOBILE.</p>
-                    <span>Juillet 2023</span>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Institut AOCI</h3>
-                    <p>Diplôme d'État</p>
-                    <span>2024</span>
-                </div>
-                
-
-                <div class="timeline-item">
-                    <h3>Institut KYAMATE</h3>
-                    <p>Études secondaires</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Ecole primaire MUSENYI de Sange</h3>
-                    <p>Études primaires</p>
-                </div>
-
+            <div class="text-center mt-4">
+                <a href="parcours-detail.html" class="btn-secondary">Voir tout le parcours & certifications <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </section>
 
-        <!-- COMPETENCES -->
-        <section class="section">
-            <h2 class="section-title">Compétences</h2>
-
-            <div class="skills-container" style="background-color: #152d3d; padding: 50px;">
-
-                <div class="skill">
-                    HTML
-                    <p class="pourcent">85%</p>
-                </div>
-                <div class="skill">
-                    CSS
-                    <p class="pourcent">85%</p>
-                </div>
-                <div class="skill">
-                    JavaScript
-                    <p class="pourcent">65%</p>
-                </div>
-                <div class="skill">
-                    Python
-                    <p class="pourcent">60%</p>
-                </div>
-                <div class="skill">
-                    SQL
-                    <p class="pourcent">70%</p>
-                </div>
-                <div class="skill">
-                    MySQL
-                    <p class="pourcent">10%</p>
-                </div>
-                <div class="skill">
-                    Flask
-                    <p class="pourcent">50%</p>
-                </div>
-                <div class="skill">
-                    Php
-                    <p class="pourcent">20%</p>
-                </div>
-                <div class="skill">
-                    IA
-                    <p class="pourcent">50%</p>
-                </div>
-
-            </div>
+        <!-- SECTION COMPÉTENCES DYNAMIQUES (JS) -->
+        <section id="competences" class="section">
+            <h2 class="section-title">Mes Compétences</h2>
+            
+            <!-- Injection dynamique des compétences par le script JavaScript -->
+            <div id="skills-container" class="skills-grid"></div>
         </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="section" style="background-color: #152d3d;">
-            <h2 class="section-title">Contact me</h2>
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Me Contacter</h2>
 
-            <div class="contact-container">
-                
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61588190810548" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-facebook-f" ></i></a>
-                    <a href="https://youtube.com/@hubtechdrc?si=TBOERxqZ5r6x81qi" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-twitter"></i></a>
-                    <a href="https://chat.whatsapp.com/GgwyBeBTqSu8wBcDb2ZMI4?mode=gi_t" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://chat.whatsapp.com/GgwyBeBTqSu8wBcDb2ZMI4?mode=gi_t" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://chat.whatsapp.com/GgwyBeBTqSu8wBcDb2ZMI4?mode=gi_t" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="btn btn-outline-light btn-lg rounded-circle mx-2"><i class="fab fa-github"></i></a>
-                </div><br>
-                
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Parlons de vos projets</h3>
+                    <p>Que ce soit pour une collaboration, une opportunité professionnelle ou une question, je reste disponible !</p>
 
-                <a href="ngombomibaraka@gmail.com" class="btn-primary">
-                    M’écrire maintenant
-                </a>
-                <a href="#" class="btn-primary" style="margin: 10px 0 0 0;">
-                    Télécharger mon CV
-                </a>
-                
+                    <div class="cv-block my-4">
+                        <p class="fw-bold mb-2"><i class="fas fa-download me-2"></i>Télécharger mon CV :</p>
+                        <div class="cv-buttons">
+                            <a href="image/CV_PRO_Francais.png" download class="btn-cv"><i class="fas fa-file-pdf text-danger"></i> Version FR</a>
+                            <a href="image/CV_pro_anglais.png" download class="btn-cv"><i class="fas fa-file-pdf text-danger"></i> Version EN</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61588190810548" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com/in/ngombo-mibaraka-dev" target="_blank" title="fa-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://chat.whatsapp.com/GgwyBeBTqSu8wBcDb2ZMI4?mode=gi_t" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group mb-3">
+                        <label for="name">Votre Nom</label>
+                        <input type="text" id="name" required placeholder="Ex: Jean Dupont">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Votre Email</label>
+                        <input type="email" id="email" required placeholder="nom@exemple.com">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" required placeholder="Objet du message">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required placeholder="Votre message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-100">
+                        <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                    </button>
+                    <div id="form-status" class="mt-3 text-center"></div>
+                </form>
             </div>
-
         </section>
     </main>
 
-    <!-- Footer ou les pieds de la page -->
-    
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 | Portfolio Ngombo Mibaraka Michael</p>
-        <p>Développé avec passion en Génie Logiciel et Informatique</p>
+        <p class="text-dim">Développé avec passion en Génie Logiciel & Informatique</p>
     </footer>
 
-    <script src="script.js">
-        
-    </script>
-
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>

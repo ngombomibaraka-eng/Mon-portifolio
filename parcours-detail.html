@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours Détaillé & Certifications | Ngombo Mibaraka Michael</title>
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques à la page parcours */
+        .page-header {
+            padding: 120px 5% 40px;
+            background: linear-gradient(to bottom, #1e293b, var(--bg-dark));
+        }
+        .btn-back {
+            color: var(--text-dim);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .btn-back:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+        .detail-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+        .detail-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .badge-date {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--primary);
+            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .certif-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+        .certif-box {
+            display: flex;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            UTC <span class="logo-sub">Génie Logiciel</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#contact" class="btn-contact-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER PAGE -->
+    <header class="page-header">
+        <div class="container">
+            <a href="index.html#parcours" class="btn-back"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+            <h1>Parcours Académique & Certifications</h1>
+            <p class="sub-text">Une vue détaillée sur ma formation en Génie Logiciel, mes certifications techniques et mon engagement associatif.</p>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        
+        <!-- SECTION 1 : FORMATION ACADÉMIQUE -->
+        <section class="mb-5">
+            <h2 class="section-title text-start mb-4"><i class="fas fa-graduation-cap text-primary"></i> Formation Académique</h2>
+
+            <div class="detail-card">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                    <h3 class="mb-0">Université Technologique du Congo (UTC)</h3>
+                    <span class="badge-date">2024 - Présent</span>
+                </div>
+                <h5 class="text-primary">Génie Logiciel & Informatique</h5>
+                <p class="text-dim mt-2">
+                    Études spécialisées dans la conception, le développement et la gestion de systèmes logiciels. Apprentissage des algorithmes, de la programmation orientée objet, des bases de données et du développement web/mobile.
+                </p>
+                <div class="tags">
+                    <span class="tag">Algorithmique</span>
+                    <span class="tag">Génie Logiciel</span>
+                    <span class="tag">Bases de données</span>
+                    <span class="tag">Architecture Logicielle</span>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                    <h3 class="mb-0">Institut AOCI</h3>
+                    <span class="badge-date">2024</span>
+                </div>
+                <h5 class="text-primary">Diplôme d'État</h5>
+                <p class="text-dim mt-2">Obtention du Diplôme d'État sanctionnant la fin des études secondaires.</p>
+            </div>
+
+            <div class="detail-card">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+                    <h3 class="mb-0">Institut KYAMATE & École Primare MUSENYI</h3>
+                    <span class="badge-date">Études Secondaires & Primaires</span>
+                </div>
+                <p class="text-dim mt-2">Parcours scolaire de base effectué à Sange et dans la région d'Uvira.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : CERTIFICATIONS & BREVETS -->
+        <section class="mb-5">
+            <h2 class="section-title text-start mb-4"><i class="fas fa-award text-primary"></i> Certifications & Certificats</h2>
+
+            <div class="detail-card">
+                <div class="certif-box">
+                    <i class="fas fa-certificate certif-icon"></i>
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-1">
+                            <h4 class="mb-0">Habari RDC & La Benevolencija</h4>
+                            <span class="badge-date">Juillet 2026</span>
+                        </div>
+                        <h6 class="text-primary">Certificat de Prévention des Discours de Haine & Consolidation de la Paix</h6>
+                        <p class="text-dim mt-2">
+                            Formation axée sur la prévention des discours de haine, la promotion de la cohésion sociale, l'éducation aux médias et à l'information (EMI) ainsi que la consolidation de la paix en RDC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="certif-box">
+                    <i class="fab fa-python certif-icon"></i>
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-1">
+                            <h4 class="mb-0">Université Technologique du Congo</h4>
+                            <span class="badge-date">Mars 2026</span>
+                        </div>
+                        <h6 class="text-primary">Brevet de Formation Python</h6>
+                        <p class="text-dim mt-2">
+                            Maîtrise des concepts fondamentaux de Python : structures de données, logique algorithmique, scripts et développement d'applications avec interfaces graphiques (CustomTkinter/Kivy).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="certif-box">
+                    <i class="fas fa-brain certif-icon"></i>
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-1">
+                            <h4 class="mb-0">Université Technologique du Congo</h4>
+                            <span class="badge-date">Novembre 2025</span>
+                        </div>
+                        <h6 class="text-primary">Brevet de Formation en IA Générative</h6>
+                        <p class="text-dim mt-2">
+                            Apprentissage de l'intégration des outils d'Intelligence Artificielle générative dans le flux de travail des développeurs et la création de solutions personnalisées.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="certif-box">
+                    <i class="fas fa-car certif-icon"></i>
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-1">
+                            <h4 class="mb-0">Formation Conduite Automobile</h4>
+                            <span class="badge-date">Juillet 2023</span>
+                        </div>
+                        <h6 class="text-primary">Brevet de Conduite Automobile</h6>
+                        <p class="text-dim mt-2">Obtention du brevet de conduite automobile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 : ENGAGEMENT COMMUNAUTAIRE & CLUBS -->
+        <section class="mb-5">
+            <h2 class="section-title text-start mb-4"><i class="fas fa-users text-primary"></i> Projets & Vie Communautaire</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="detail-card h-100">
+                        <h4 class="text-primary"><i class="fas fa-rocket"></i> Hub Tech DRC</h4>
+                        <p class="badge-date d-inline-block mt-1 mb-2">Co-fondateur</p>
+                        <p class="text-dim">
+                            Club d'innovation et de transformation numérique basé à l'UTC-Uvira. Organisation d'ateliers, encadrement des étudiants et promotion des nouvelles technologies dans la région.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-card h-100">
+                        <h4 class="text-primary"><i class="fas fa-code"></i> Passionnated Web Club</h4>
+                        <p class="badge-date d-inline-block mt-1 mb-2">Membre Actif - Nov 2025</p>
+                        <p class="text-dim">
+                            Participation à des sessions intensives de formation et de pratique axées sur le développement Web Front-End moderne (HTML5, CSS3, JS).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Portfolio Ngombo Mibaraka Michael - UTC Génie Logiciel</p>
+    </footer>
+
+</body>
+</html>

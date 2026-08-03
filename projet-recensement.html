@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet | Système de Recensement à Uvira</title>
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques aux pages de détail */
+        .project-header {
+            padding: 120px 5% 40px;
+            background: linear-gradient(to bottom, #1e293b, var(--bg-dark));
+        }
+        .btn-back {
+            color: var(--text-dim);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .btn-back:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+        .project-meta-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 30px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-card p {
+            padding: 12px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-align: center;
+            margin: 0;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .feature-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">
+            UTC <span class="logo-sub">Génie Logiciel</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#contact" class="btn-contact-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENTÊTE PROJET -->
+    <header class="project-header">
+        <div class="container">
+            <a href="index.html#projets" class="btn-back"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1>Système Intelligente de Recensement des Ménages</h1>
+            <p class="sub-text">Solution logicielle optimisée pour la collecte, le traitement et la gestion des données de recensement à Uvira.</p>
+            
+            <div class="d-flex gap-3 flex-wrap mt-4">
+                <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-primary">
+                    <i class="fab fa-github"></i> Code Source (GitHub)
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-external-link-alt"></i> Voir la Démo / Télécharger l'APK
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            
+            <!-- INFORMATIONS ET FONCTIONNALITÉS -->
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h2><i class="fas fa-info-circle text-primary"></i> Présentation du Projet</h2>
+                    <p>
+                        Face aux défis d'enregistrement manuel de la population dans la ville d'Uvira, ce système a été conçu pour digitaliser le recensement. Il permet aux agents de terrain de collecter rapidement les données des ménages et offre une interface d'administration pour analyser les statistiques démographiques en temps réel.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <h2><i class="fas fa-list-check text-primary"></i> Fonctionnalités Clés</h2>
+                    <ul class="feature-list">
+                        <li>Formulaire d'enregistrement dynamique et rapide des chefs de ménage et dépendants.</li>
+                        <li>Mode hors-ligne pour la collecte de données sur le terrain avec synchronisation ultérieure.</li>
+                        <li>Tableau de bord statistique affichant la répartition de la population par quartier.</li>
+                        <li>Exportation automatique des rapports sous format PDF et Excel.</li>
+                        <li>Système d'authentification sécurisé pour les agents recenseurs.</li>
+                    </ul>
+                </section>
+
+                <!-- GALERIE / CAPTURES D'ÉCRAN -->
+                <section class="mb-5">
+                    <h2><i class="fas fa-images text-primary"></i> Captures d'Écran & Démo</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Tableau de bord">
+                            <p>Tableau de bord d'administration</p>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Interface de saisie">
+                            <p>Interface de saisie sur CustomTkinter</p>
+                        </div>
+                        <div class="gallery-card">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Rapports statistiques">
+                            <p>Analyse des données et rapports</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- FICHE TECHNIQUE (SIDEBAR) -->
+            <div class="col-lg-4">
+                <div class="project-meta-box">
+                    <h4>Fiche Technique</h4>
+                    <hr style="border-color: rgba(255,255,255,0.1);">
+                    
+                    <p><strong>Rôle :</strong> Développeur Lead</p>
+                    <p><strong>Contexte :</strong> Projet Académique / UTC Uvira</p>
+                    <p><strong>Durée :</strong> 2 mois (2026)</p>
+                    
+                    <h5 class="mt-4">Technologies Utilisées</h5>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CustomTkinter</span>
+                        <span class="tag">Kivy (Mobile)</span>
+                        <span class="tag">SQLite3</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+
+                    <h5 class="mt-4">Partager ce projet</h5>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send?text=Découvrez%20le%20projet%20de%20recensement%20d'Uvira" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Portfolio Ngombo Mibaraka Michael - UTC Génie Logiciel</p>
+    </footer>
+
+</body>
+</html>
