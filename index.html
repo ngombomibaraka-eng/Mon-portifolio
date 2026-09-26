@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ngombo Mibaraka Michael</title>
 
-    <!-- Frameworks & Polices -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS Personnalisé -->
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=6.0">
 </head>
 <body>
 
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="logo">
-            UTC <span class="logo-sub">Génie Logiciel</span>
+            <span class="logo-sub">Génie Logiciel</span>
         </div>
 
         <div class="menu-toggle" id="mobile-menu">
@@ -28,15 +26,25 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#contact" class="btn-contact-nav">Contact</a></li>
+            <li><a href="#accueil" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#projets" data-i18n="nav_projects">Projets</a></li>
+            <li><a href="#parcours" data-i18n="nav_timeline">Parcours</a></li>
+            <li><a href="#competences" data-i18n="nav_skills">Compétences</a></li>
+            <li><a href="#contact" class="btn-contact-nav" data-i18n="nav_contact">Contact</a></li>
+            
+            <li class="lang-selector-container ms-2">
+                <i class="fas fa-globe text-primary me-1"></i>
+                <select id="lang-select" class="lang-select">
+                    <option value="fr" selected>Français</option>
+                    <option value="en">English</option>
+                    <option value="sw">Kiswahili</option>
+                </select>
+            </li>
         </ul>
     </nav>
 
-    <!-- SECTION HERO -->
+
+    <!-- HERO SECTION -->
     <header id="accueil" class="hero">
         <div class="hero-container">
             <div class="hero-photo-container">
@@ -44,45 +52,137 @@
             </div>
             
             <div class="hero-text">
-                <span class="greeting">Bonjour, je suis</span>
+                <span class="greeting" data-i18n="hero_greeting">Bonjour, je suis</span>
                 <h1>Ngombo Mibaraka <span class="highlight">Michael</span></h1>
-                <p class="role-title">Étudiant en Génie Logiciel & Informatique à l'Université Technologique du Congo (UTC)</p>
-                <p class="sub-info"><i class="fas fa-rocket text-primary"></i> Co-fondateur Hub Tech DRC | Membre Passionnated Web Club</p>
+                <p class="role-title" data-i18n="hero_role">Étudiant en Génie Logiciel & Développeur Web | Spécialiste IA Générative à l'UTC Uvira</p>
+                <p class="sub-info"><i class="fas fa-rocket text-primary"></i> <span data-i18n="hero_sub">Co-fondateur Hub Tech DRC | Membre Passionnated Web Club</span></p>
 
                 <div class="hero-btns">
-                    <a href="#projets" class="btn-primary">Découvrir mes projets</a>
-                    <a href="#contact" class="btn-secondary">Me contacter</a>
+                    <a href="#projets" class="btn-primary" data-i18n="btn_discover">Découvrir mes projets</a>
+                    <button id="btn-open-cv-modal" class="btn-secondary"><i class="fas fa-file-pdf me-2 text-danger"></i><span data-i18n="btn_view_cv">Voir / Télécharger mon CV</span></button>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- SECTION PROJETS -->
+        <!-- PROJETS -->
         <section id="projets" class="section">
-            <h2 class="section-title">Mes Réalisations</h2>
+            <h2 class="section-title" data-i18n="title_projects">Mes Réalisations</h2>
 
             <div class="projects-grid">
+
+                <!-- 3e CBCA Mulongwe -->
                 <div class="project-card">
                     <div class="card-content">
-                        <h3>Système de Recensement</h3>
-                        <p>Plateforme intelligente pour la gestion des ménages à Uvira.</p>
+                        <h3>3e CBCA MULONGWE</h3>
+                        <p data-i18n="desc_cbca">Site de l'église 3e Communauté Baptiste au Centre de l'Afrique paroisse MULONGWE.</p>
                         <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">CustomTkinter</span>
-                            <span class="tag">Kivy</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://ngombomibaraka-eng.github.io/cbca_mulongwe/" class="btn-link-more"><span>En savoir plus</span> <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mon Portfolio Personnel -->
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Mon Portfolio Professionnel</h3>
+                        <p data-i18n="desc_portfolio">Site web vitrine multilingue et interactif présentant mes compétences, projets et parcours en Génie Logiciel.</p>
+                        <div class="tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">UI/UX</span>
                         </div>
                     </div>
                     <div class="card-actions">
                         <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
-                        <a href="projet-recensement.html" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                        <span class="badge bg-primary-subtle text-primary border border-primary px-2 py-1 rounded" data-i18n="tag_active">Projet Actuel</span>
                     </div>
                 </div>
 
+                <!-- My Loc -->
+                <div class="project-card badge-upcoming-container">
+                    <span class="badge-upcoming" data-i18n="badge_soon">Bientôt disponible</span>
+                    <div class="card-content">
+                        <h3>My Loc - Gestion Immobilière</h3>
+                        <p data-i18n="desc_myloc">Propriétaire et locataire gèrent leurs biens avec sécurité. Système intelligent de suivi des baux et des loyers.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Immobilier</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <span class="status-disabled"><i class="fas fa-clock me-1"></i> <span data-i18n="status_in_dev">En développement</span></span>
+                    </div>
+                </div>
+
+                <!-- UviraMarket -->
                 <div class="project-card">
                     <div class="card-content">
-                        <h3>Portfolio Personnel</h3>
-                        <p>Site web moderne, réactif et dynamique pour présenter mon profil.</p>
+                        <h3>UviraMarket</h3>
+                        <p data-i18n="desc_uviramarket">Plateforme e-commerce locale connectant vendeurs, acheteurs et administrateurs de la ville d'Uvira.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">E-Commerce</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://uvira-market-omega.vercel.app" target="_blank" class="btn-link-more"><span data-i18n="btn_demo">Voir la démo</span> <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- EduGest -->
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>EduGest</h3>
+                        <p data-i18n="desc_edugest">Système SaaS de gestion d'établissements scolaires : suivi académique, registres d'élèves et comptabilité financière.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SaaS</span>
+                            <span class="tag">Gestion Financière</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://edu-gest-beta.vercel.app" target="_blank" class="btn-link-more"><span data-i18n="btn_demo">Voir la démo</span> <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Munga Family -->
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Munga Family</h3>
+                        <p data-i18n="desc_mungafamily">Application web interactive dédiée au registre familial : arbre généalogique visuel et mémoire patrimoniale.</p>
+                        <div class="tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Web App</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://munga-family.vercel.app" target="_blank" class="btn-link-more"><span data-i18n="btn_demo">Voir la démo</span> <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Hub Tech DRC -->
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Hub Tech DRC</h3>
+                        <p data-i18n="desc_hubtech">Plateforme officielle du club d'innovation et de transformation numérique basé à l'Université Technologique du Congo (UTC-Uvira).</p>
                         <div class="tags">
                             <span class="tag">HTML5</span>
                             <span class="tag">CSS3</span>
@@ -90,121 +190,78 @@
                         </div>
                     </div>
                     <div class="card-actions">
-                        <a href="https://github.com/ngombomibaraka-eng/" target="_blank" class="btn-icon"><i class="fab fa-github"></i> Code</a>
-                        <a href="#" class="btn-link-more">Projet en cours</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-content">
-                        <h3>3e CBCA MULONGWE</h3>
-                        <p>Site de l'église 3e Communauté Baptiste au Centre de l'Afrique paroisse MULONGWE.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://ngombomibaraka-eng.github.io/cbca_mulongwe/" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="card-content">
-                        <h3>Hub Tech DRC</h3>
-                        <p>Plateforme officielle du club d'innovation et de transformation numérique à l'UTC-Uvira.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                    </div>
-                    <div class="card-actions">
                         <a href="https://youtube.com/@hubtechdrc?si=TBOERxqZ5r6x81qi" target="_blank" class="btn-icon"><i class="fab fa-youtube"></i> YouTube</a>
-                        <a href="#" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-content">
-                        <h3>Créateur de Chansons Personnalisées</h3>
-                        <p>Service de personnalisation de musiques pour événements (Anniversaires, Réceptions, etc.).</p>
-                        <div class="tags">
-                            <span class="tag">IA Générative</span>
-                            <span class="tag">Audio</span>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <a href="#" class="btn-link-more">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+            </div>
+
+            <!-- BOUTON VOIR TOUTES LES RÉALISATIONS -->
+            <div class="text-center mt-5">
+                <a href="projets-detail.html" class="btn-secondary d-inline-flex align-items-center gap-2">
+                    <span>Voir toutes les réalisations</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </section>
 
-        <!-- SECTION PARCOURS -->
+        <!-- PARCOURS -->
         <section id="parcours" class="section">
-            <h2 class="section-title">Mon Parcours</h2>
+            <h2 class="section-title" data-i18n="title_timeline">Mon Parcours</h2>
 
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="timeline-date">2024 - Présent</span>
-                    <h3>Université Technologique du Congo</h3>
-                    <p>Études en Génie Logiciel & Informatique</p>
+                    <h3>Université Technologique du Congo (UTC)</h3>
+                    <p data-i18n="tl_utc">Études supérieures en Génie Logiciel & Informatique</p>
                 </div>
 
                 <div class="timeline-item">
                     <span class="timeline-date">Juillet 2026</span>
                     <h3>Habari RDC x La Benevolencija</h3>
-                    <p>Certificat : Prévention des discours de haine et consolidation de la paix</p>
+                    <p data-i18n="tl_benevolencija">Certificat : Prévention des discours de haine et consolidation de la paix</p>
                 </div>
 
                 <div class="timeline-item">
                     <span class="timeline-date">Mars 2026</span>
                     <h3>Université Technologique du Congo</h3>
-                    <p>Brevet de formation Python</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="timeline-date">Novembre 2025</span>
-                    <h3>Passionnated Web Club & UTC</h3>
-                    <p>Formations Web Front-End & IA Générative</p>
+                    <p data-i18n="tl_python">Brevet de formation spécialisée en Python</p>
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <a href="parcours-detail.html" class="btn-secondary">Voir tout le parcours & certifications <i class="fas fa-arrow-right ms-2"></i></a>
+            <!-- BOUTON VOIR TOUT LE PARCOURS ET CERTIFICATIONS -->
+            <div class="text-center mt-5">
+                <a href="parcours-detail.html" class="btn-secondary d-inline-flex align-items-center gap-2">
+                    <span>Voir tout le parcours & certifications</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </section>
 
-        <!-- SECTION COMPÉTENCES DYNAMIQUES (JS) -->
+        <!-- COMPÉTENCES -->
         <section id="competences" class="section">
-            <h2 class="section-title">Mes Compétences</h2>
-            
-            <!-- Injection dynamique des compétences par le script JavaScript -->
+            <h2 class="section-title" data-i18n="title_skills">Mes Compétences</h2>
             <div id="skills-container" class="skills-grid"></div>
         </section>
 
-        <!-- SECTION CONTACT -->
+        <!-- CONTACT -->
         <section id="contact" class="section">
-            <h2 class="section-title">Me Contacter</h2>
+            <h2 class="section-title" data-i18n="title_contact">Me Contacter</h2>
 
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>Parlons de vos projets</h3>
-                    <p>Que ce soit pour une collaboration, une opportunité professionnelle ou une question, je reste disponible !</p>
+                    <h3 data-i18n="contact_subtitle">Parlons de vos projets</h3>
+                    <p data-i18n="contact_desc">Que ce soit pour une application web, la gestion immobilière ou une collaboration en IA générative, je suis à votre écoute !</p>
 
                     <div class="cv-block my-4">
-                        <p class="fw-bold mb-2"><i class="fas fa-download me-2"></i>Télécharger mon CV :</p>
-                        <div class="cv-buttons">
-                            <a href="image/CV_PRO_Francais.png" download class="btn-cv"><i class="fas fa-file-pdf text-danger"></i> Version FR</a>
-                            <a href="image/CV_pro_anglais.png" download class="btn-cv"><i class="fas fa-file-pdf text-danger"></i> Version EN</a>
-                        </div>
+                        <button id="btn-trigger-cv" class="btn-cv-trigger">
+                            <i class="fas fa-eye text-primary me-2"></i> <span data-i18n="btn_view_download_cv">Consulter ou Télécharger mon CV</span>
+                        </button>
                     </div>
 
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61588190810548" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://linkedin.com/in/ngombo-mibaraka-dev" target="_blank" title="fa-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@hubtechdrc?si=TBOERxqZ5r6x81qi" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://chat.whatsapp.com/GgwyBeBTqSu8wBcDb2ZMI4?mode=gi_t" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://github.com/ngombomibaraka-eng/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
@@ -212,37 +269,60 @@
 
                 <form id="contact-form" class="contact-form">
                     <div class="form-group mb-3">
-                        <label for="name">Votre Nom</label>
+                        <label for="name" data-i18n="lbl_name">Votre Nom</label>
                         <input type="text" id="name" required placeholder="Ex: Jean Dupont">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="email">Votre Email</label>
+                        <label for="email" data-i18n="lbl_email">Votre Email</label>
                         <input type="email" id="email" required placeholder="nom@exemple.com">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="subject">Sujet</label>
+                        <label for="subject" data-i18n="lbl_subject">Sujet</label>
                         <input type="text" id="subject" required placeholder="Objet du message">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" required placeholder="Votre message..."></textarea>
+                        <label for="message" data-i18n="lbl_message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Votre message..."></textarea>
                     </div>
                     <button type="submit" class="btn-primary w-100">
-                        <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                        <i class="fas fa-paper-plane me-2"></i> <span data-i18n="btn_send">Envoyer le message</span>
                     </button>
-                    <div id="form-status" class="mt-3 text-center"></div>
+
+                    <div id="form-response" class="form-response-box mt-3 d-none">
+                        <i class="fas fa-check-circle me-2 text-success"></i>
+                        <span id="response-text">L'auteur vous répondra dans un instant !</span>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- MODAL CV POPUP -->
+    <div id="cv-modal" class="cv-modal">
+        <div class="cv-modal-content">
+            <div class="cv-modal-header">
+                <h3><i class="fas fa-file-pdf text-danger me-2"></i> Curriculum Vitae</h3>
+                <span class="close-cv-modal" id="close-cv-modal">&times;</span>
+            </div>
+            <div class="cv-modal-body">
+                <p class="text-dim mb-3" data-i18n="cv_modal_info">Le CV est synchronisé avec la langue actuellement sélectionnée sur le site.</p>
+                <div class="cv-viewer-container">
+                    <iframe id="cv-frame" src="assets/CV_Ngombo_FR.pdf" width="100%" height="450px" style="border:none; border-radius:8px;"></iframe>
+                </div>
+            </div>
+            <div class="cv-modal-footer">
+                <a id="btn-download-cv" href="assets/CV_Ngombo_FR.pdf" download class="btn-primary">
+                    <i class="fas fa-download me-2"></i> <span data-i18n="btn_download">Télécharger le document PDF</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 | Portfolio Ngombo Mibaraka Michael</p>
-        <p class="text-dim">Développé avec passion en Génie Logiciel & Informatique</p>
+        <p class="text-dim" data-i18n="footer_sub">Développé avec passion en Génie Logiciel & Informatique</p>
     </footer>
 
-    <!-- SCRIPT -->
-    <script src="script.js"></script>
+    <script src="script.js?v=5.0"></script>
 </body>
 </html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réalisations & Projets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#3b82f6',
+                            dark: '#0B132B',
+                            card: '#1C2541',
+                            lighter: '#3A506B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0B132B] text-slate-100 min-h-screen font-sans antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0B132B]/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                <span class="font-medium">Retour au portfolio</span>
+            </a>
+            <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                Mes Réalisations
+            </h1>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Projets & Travaux Réalisés</h2>
+            <p class="text-slate-400 text-lg">
+                Découvrez l'ensemble de mes projets récents en développement web, solutions numériques et initiatives académiques ou communautaires.
+            </p>
+        </section>
+
+        <!-- Filtres / Tags (Optionnel) -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <button class="px-4 py-2 rounded-full bg-blue-600 text-white font-medium text-sm">Tous les projets</button>
+            <button class="px-4 py-2 rounded-full bg-[#1C2541] text-slate-300 hover:bg-slate-800 font-medium text-sm transition">Web Dev</button>
+            <button class="px-4 py-2 rounded-full bg-[#1C2541] text-slate-300 hover:bg-slate-800 font-medium text-sm transition">Communautaire</button>
+            <button class="px-4 py-2 rounded-full bg-[#1C2541] text-slate-300 hover:bg-slate-800 font-medium text-sm transition">Logiciel & Python</button>
+        </div>
+
+        <!-- Grille des Projets -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Projet 1: Site Web 3e CBCA Mulongwe -->
+            <article class="bg-[#1C2541] border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col group">
+                <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1C2541] to-transparent z-10"></div>
+                    <i data-lucide="church" class="w-16 h-16 text-blue-400 group-hover:scale-110 transition duration-300"></i>
+                    <span class="absolute top-4 right-4 z-20 px-3 py-1 bg-blue-600/80 text-xs font-semibold rounded-full backdrop-blur-md">
+                        En vedette
+                    </span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Site Web & Plateforme</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2 group-hover:text-blue-400 transition">3e CBCA Mulongwe</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Conception et développement du site officiel de la 3e Communauté Baptiste au Centre de l'Afrique (CBCA) Mulongwe. Présentation des activités, annonces et ressources.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">HTML5/CSS3</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">JavaScript</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">Tailwind CSS</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition">
+                            <span>Voir le projet</span>
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 2: Application Web / UTC -->
+            <article class="bg-[#1C2541] border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col group">
+                <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1C2541] to-transparent z-10"></div>
+                    <i data-lucide="graduation-cap" class="w-16 h-16 text-indigo-400 group-hover:scale-110 transition duration-300"></i>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Génie Logiciel</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2 group-hover:text-indigo-400 transition">Plateforme UTC Student</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Projet académique développé dans le cadre des études en Génie Logiciel à l'Université Technologique du Congo.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">Python</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">Django</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">SQL</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition">
+                            <span>Voir les détails</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 3: Passionnated Web Club -->
+            <article class="bg-[#1C2541] border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col group">
+                <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1C2541] to-transparent z-10"></div>
+                    <i data-lucide="code-2" class="w-16 h-16 text-cyan-400 group-hover:scale-110 transition duration-300"></i>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">IA Générative & Front-End</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2 group-hover:text-cyan-400 transition">Passionnated Web Hub</h3>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Série de modules interactifs et projets web créés en intégrant les outils d'IA générative modernes.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">React</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">AI APIs</span>
+                            <span class="px-2.5 py-1 text-xs bg-slate-800 text-slate-300 rounded-md">Tailwind</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition">
+                            <span>Voir le dépôt</span>
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Redirection vers le Parcours & Certifications -->
+        <section class="mt-20 pt-10 border-t border-slate-800 text-center">
+            <h3 class="text-2xl font-bold mb-3">Envie d'en savoir plus sur mon cursus ?</h3>
+            <p class="text-slate-400 mb-6 max-w-lg mx-auto">
+                Consultez mon parcours académique, mes formations certifiantes ainsi que mes diplômes obtenus.
+            </p>
+            <a href="parcours-detail.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 hover:bg-slate-700 hover:border-slate-600 text-white font-medium transition duration-200">
+                <span>Voir tout le parcours & certifications</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
